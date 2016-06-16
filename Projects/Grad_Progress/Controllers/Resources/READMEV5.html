@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
+
+    <html lang="en"> 
+        <head>
+          <title>README - V5</title> 
+      
+          <!-- Meta Information about Page -->
+          <meta charset="utf-8" />
+          <meta name="AUTHOR"      content="Ryan Welling"/>
+          <meta name="keywords"    content="University of Utah, Spring 2016"/>
+          <meta name="description" content="READMEV5"/>
+      
+          </head>
+
+        <body>       
+
+			<div id = header>
+				
+				<div align="center" style="margin-top: 50px;">
+					<h1>CS4540 - Web Software Architecture</h1>
+					<h2>Ryan Welling - README - V5</h2>
+					<p style="color: red; margin-bottom: 50px;">University of Utah</p>
+				
+					<a href="../../../../index.html" title="Projects Main Page">Home</a><br>
+					<a href="https://github.com/uofu-cs4540/133136" title="Repo">Github Repo for Class</a><br>
+					<a href="https://github.com/HeroOfCanton" title="Repo">Personal Github Repo</a><br>
+
+					<p style="margin-top: 10px; width: 800px;">The School of Computing tracks Graduate student progress each semester to make sure the students are making satisfactory progress toward their degree.</p>
+
+                    <p style="margin-top: 10px; width: 800px;">I was sick and unable to attend class this week. Given that, and given how poorly the assignment was explainedgit , I wasn't able to ask questions of Jim or the TA's regarding the Student Status page. I asked several classmates, and posted in the forums, but no one had any idea what that meant. As such, I didn't implement it.</p>
+
+                    <p style="margin-top: 10px; width: 800px;">Every user password, for now, is password. Student logins include: bross, mreynold, acarver ~ Faculty logins include: rwelling, lluthor ~ DGS login: tzahn</p>
+
+                    <p style="margin-top: 10px; width: 800px;">I spent a lot of time on proper authentication, given that that is what this assignment is about. No Student should be able to see anything but their own forms; there is authentication checking for any /Advisor or /DGS pages (there are no DGS pages yet) and they also can't hack the URL to get to someone else's form and either view or change that.  I implemented some simple JS on the Entrance portal to display a different 4th element of the navbar depending on the role (in case someone came back to that page, but they were already logged in) and which hides the Login form until they press the Login button. The navbar also changes on the Due Progress Form, depending on if an advisor or student go there.</p>
+
+                    <p style="margin-top: 10px; width: 800px;">There were several major bugs from previous versions that I had to fix as well. When a student edited their progress form, if they changed advisors, I didn't update the 'Student' table, which stores the most current advisor, and the form didn't take into account an existing Student going to that form and filling out a New Form, instead of editing an existing form.</p>
+
+					<p style="margin-top: 10px; width: 800px;">Testing strategy was simple: Use OSX, Window 7, Windows 10, and Ubuntu Linux, along with their native browsers and extra browsers, like Chrome, and Firefox, to make sure the page renders correclty.  Only Support for IE 11 and up, as Microsoft has terminated support for IE9 and 10.</p>
+
+					<p style="margin-top: 20px; width: 800px;">The following pages were referenced in the design process: 
+						<ul>
+							<li><a href="http://stackoverflow.com/questions/12953917/clearing-post-array-fully">http://stackoverflow.com/questions/12953917/clearing-post-array-fully</a></li>
+							<li><a href="http://stackoverflow.com/questions/15472764/regular-expression-to-allow-spaces-between-words">http://stackoverflow.com/questions/15472764/regular-expression-to-allow-spaces-between-words</a></li>
+							<li><a href="http://html5doctor.com/html5-forms-input-types/">hhttp://html5doctor.com/html5-forms-input-types/</a></li>
+							<li><a href="http://stackoverflow.com/questions/4035361/whats-the-meaning-of-static-when-declaring-a-function">http://stackoverflow.com/questions/4035361/whats-the-meaning-of-static-when-declaring-a-function</a></li>
+							<li><a href="http://stackoverflow.com/questions/19499589/insert-css-in-php-if-statement">http://stackoverflow.com/questions/19499589/insert-css-in-php-if-statement</a></li>
+							<li><a href="http://stackoverflow.com/questions/528445/is-there-any-way-to-return-html-in-a-php-function-without-building-the-return">http://stackoverflow.com/questions/528445/is-there-any-way-to-return-html-in-a-php-function-without-building-the-return</a></li>
+							<li><a href="http://stackoverflow.com/questions/11020575/php-return-value-from-function-and-echo-it-directly">http://stackoverflow.com/questions/11020575/php-return-value-from-function-and-echo-it-directly</a></li>
+							<li><a href="http://stackoverflow.com/questions/6130596/using-php-variables-inside-html-tags">http://stackoverflow.com/questions/6130596/using-php-variables-inside-html-tags</a></li>
+						</ul>
+					</p>
+
+				</div>
+
+			</div>
+
+		</body>
+
+	</html>
+
+

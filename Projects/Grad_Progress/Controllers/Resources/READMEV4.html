@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
+
+    <html lang="en"> 
+        <head>
+          <title>README - V3</title> 
+      
+          <!-- Meta Information about Page -->
+          <meta charset="utf-8" />
+          <meta name="AUTHOR"      content="Ryan Welling"/>
+          <meta name="keywords"    content="University of Utah, Spring 2016"/>
+          <meta name="description" content="READMEV3"/>
+      
+          </head>
+
+        <body>       
+
+			<div id = header>
+				
+				<div align="center" style="margin-top: 50px;">
+					<h1>CS4540 - Web Software Architecture</h1>
+					<h2>Ryan Welling - README - V4</h2>
+					<p style="color: red; margin-bottom: 50px;">University of Utah</p>
+				
+					<a href="../../../../index.html" title="Projects Main Page">Home</a><br>
+					<a href="https://github.com/uofu-cs4540/133136" title="Repo">Github Repo for Class</a><br>
+					<a href="https://github.com/HeroOfCanton" title="Repo">Personal Github Repo</a><br>
+
+					<p style="margin-top: 10px; width: 800px;">The School of Computing tracks Graduate student progress each semester to make sure the students are making satisfactory progress toward their degree. We will be implementing a system to move this manual/paper-based process into the ether, by showing some static proof of concept web pages that will (a) allow the display of a list of students, (b) allow the list of multiple progress reports per student, and (c) show the status of a student's specific progress report.</p>
+
+					<p style="margin-top: 10px; width: 800px;">I wanted the UI choices to be simple and clean. I completely redid the styling of my site, trying to avoid the image and transparent tables from last time. I added some custom buttons, with animation, instead of the tables I was using. I also added a gradient to the background</p>
+
+					<p style="margin-top: 10px; width: 800px;">I have tried to do some of the things mentioned for superior work. If a form doesn't save properly, there is messaging. Also, the form doesn't wipe itself clean when, rather the correct information is retained for the next submission. I have a sign feature, which you can see here: <a href="http://uofu-cs4540-84.westus.cloudapp.azure.com/Projects/Grad_Progress/Student/indiv_form.php?form_id=100049"> this form</a> shows where the 'Sign Form' button goes; the button only appears when the form is unsigned, and <a href="http://uofu-cs4540-84.westus.cloudapp.azure.com/Projects/Grad_Progress/Advisor/students.php?lastName=Welling">this advisor</a> shows what you would see, as an advisor, if you have forms that are unsigned. All grad forms submitted are unsigned, and will appear in the Advisors view until signed.</p>
+
+					<p style="margin-top: 10px; width: 800px;">The double verification of the form input data comes from the front end, where I have regex patterns, and fields are required, and the back end, where I check to see if the various $_POST variables are empty, and if so, display an error. While most browsers support the 'required' form tag, Safari doesn't, which would allow a user to submit and empty form. However, the checking of $_POST prevents that from actually being added to the database.</p>
+
+					<p style="margin-top: 10px; width: 800px;">Testing strategy was simple: Use OSX, Window 7, Windows 10, and Ubuntu Linux, along with their native browsers and extra browsers, like Chrome, and Firefox, to make sure the page renders correclty.  Only Support for IE 11 and up, as Microsoft has terminated support for IE9 and 10.</p>
+
+					<p style="margin-top: 20px; width: 800px;">The following pages were referenced in the design process: 
+						<ul>
+							<li><a href="http://stackoverflow.com/questions/12953917/clearing-post-array-fully">http://stackoverflow.com/questions/12953917/clearing-post-array-fully</a></li>
+							<li><a href="http://stackoverflow.com/questions/15472764/regular-expression-to-allow-spaces-between-words">http://stackoverflow.com/questions/15472764/regular-expression-to-allow-spaces-between-words</a></li>
+							<li><a href="http://html5doctor.com/html5-forms-input-types/">hhttp://html5doctor.com/html5-forms-input-types/</a></li>
+							<li><a href="http://stackoverflow.com/questions/4035361/whats-the-meaning-of-static-when-declaring-a-function">http://stackoverflow.com/questions/4035361/whats-the-meaning-of-static-when-declaring-a-function</a></li>
+							<li><a href="http://stackoverflow.com/questions/19499589/insert-css-in-php-if-statement">http://stackoverflow.com/questions/19499589/insert-css-in-php-if-statement</a></li>
+							<li><a href="http://stackoverflow.com/questions/528445/is-there-any-way-to-return-html-in-a-php-function-without-building-the-return">http://stackoverflow.com/questions/528445/is-there-any-way-to-return-html-in-a-php-function-without-building-the-return</a></li>
+							<li><a href="http://stackoverflow.com/questions/11020575/php-return-value-from-function-and-echo-it-directly">http://stackoverflow.com/questions/11020575/php-return-value-from-function-and-echo-it-directly</a></li>
+							<li><a href="http://stackoverflow.com/questions/6130596/using-php-variables-inside-html-tags">http://stackoverflow.com/questions/6130596/using-php-variables-inside-html-tags</a></li>
+						</ul>
+					</p>
+
+				</div>
+
+			</div>
+
+		</body>
+
+	</html>
+
+

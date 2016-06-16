@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
+
+    <html lang="en"> 
+        <head>
+          <title>README - V5</title> 
+      
+          <!-- Meta Information about Page -->
+          <meta charset="utf-8" />
+          <meta name="AUTHOR"      content="Ryan Welling"/>
+          <meta name="keywords"    content="University of Utah, Spring 2016"/>
+          <meta name="description" content="READMEV6"/>
+      
+          </head>
+
+        <body>       
+
+			<div id = header>
+				
+				<div style="margin-top: 50px; margin-left: 50px;">
+					<h1>CS4540 - Web Software Architecture</h1>
+					<h2>Ryan Welling - README - V6</h2>
+					<p style="color: red; margin-bottom: 50px;">University of Utah</p>
+				
+					<a href="../../../../index.html" title="Projects Main Page">Home</a><br>
+					<a href="https://github.com/uofu-cs4540/133136" title="Repo">Github Repo for Class</a><br>
+					<a href="https://github.com/HeroOfCanton" title="Repo">Personal Github Repo</a><br>
+
+					<p style="margin-top: 10px; width: 800px;">The School of Computing tracks Graduate student progress each semester to make sure the students are making satisfactory progress toward their degree.</p>
+
+          <p style="margin-top: 10px; width: 800px;">First, I went through and sanitized all of my database calls that either update or insert information into them. You can see that in the Model/Student/save_progess_model.php, among others. I sanitized a few calls from the database, but not many, as I have regex's on the front to prevent bogus information, and all of my inserts and updates are sanitized. </p>
+
+          <p style="margin-top: 10px; width: 800px;">Every user password, for now, is password. Student logins include: bross, mreynold, acarver ~ Faculty logins include: rwelling, lluthor ~ DGS login: tzahn</p>
+
+          <p style="margin-top: 10px; width: 800px;">There is a known issue with new user creation. Somehow, in the effort to sanitize inputs, new user's passwords are being hashed wrong. I can't figure it out, but that's not part of the assignment this week, so I didn't fix it. It was working in V5.</p>
+
+          <p style="margin-top: 10px; width: 800px;">Regarding Bootstrap, I've redone every page, except for the main page, the readme's, and the logged out / unauthorized page. This was a conscious decision on my part, I wanted some variation on the logged out and not authorized page as a further visual cue to the user that something drastic had happened. Regarding my layout, and how I've chosen to display the information, it doesn't lend itself to much customization, so I really had to work at finding places to show my understanding of the grid system, as well as the 10 items of Bootstrap. The grid can most clearly be seen on the indiv_form.php page for each user, as there are several containers, and multiple columns. Regarding the bootstrap elements, I included: </p>
+
+          <ul>
+	          <li>
+	          	Jumbotrons (almost every page)
+	          </li>
+	          <li>
+	          	Buttons (everywhere)
+	          </li>
+	          <li>
+	          	Button Groups (on individual student form page)
+	          </li>
+	         	<li>
+	         		Tables (table hover and border) 
+	         	</li>
+	         	<li>
+	         		Horizontal forms (Login) 
+	         	</li>
+	         	<li>
+	         		Vertical forms (Due Progress) 
+	         	</li>
+	         	<li>
+	         		Drop downs and radio dials (Due Progress form)
+	         	</li>
+	         	<li>
+	         		Nav bars (everywhere)
+	         	</li>
+	         	<li>
+	         		Labels (on the individual student form page, the warning is a label)
+	         	</li>
+	         	<li>
+	         		Badges (advisor's list of students. Badge updates depending on how many signed forms there are)
+	         	</li>
+          </ul>
+
+          <p style="margin-top: 10px; width: 800px;">There were several major bugs from previous versions that I had to fix as well. It was brought to my attention that using the back button, after logging out, would allow the previous data to be retrieved; that's been fixed. In addition, there were several other bugs with regards to editing user's information and forms, and different flows they could take to get into the wrong information.</p>
+
+					<p style="margin-top: 10px; width: 800px;">Testing strategy was simple: Use OSX, Window 7, Windows 10, and Ubuntu Linux, along with their native browsers and extra browsers, like Chrome, and Firefox, to make sure the page renders correclty.  Only Support for IE11 and up, as Microsoft has terminated support for IE9 and 10.</p>
+
+					<p style="margin-top: 20px; width: 800px;">The following pages were referenced in the design process: 
+						<ul>
+							<li><a href="http://stackoverflow.com/questions/12953917/clearing-post-array-fully">http://stackoverflow.com/questions/12953917/clearing-post-array-fully</a></li>
+							<li><a href="http://php.net/manual/en/language.operators.increment.php">http://php.net/manual/en/language.operators.increment.php</a></li>
+							<li><a href="http://html5doctor.com/html5-forms-input-types/">hhttp://html5doctor.com/html5-forms-input-types/</a></li>
+							<li><a href="http://stackoverflow.com/questions/4035361/whats-the-meaning-of-static-when-declaring-a-function">http://stackoverflow.com/questions/4035361/whats-the-meaning-of-static-when-declaring-a-function</a></li>
+							<li><a href="http://www.w3schools.com/cssref/css3_pr_text-shadow.asp">http://www.w3schools.com/cssref/css3_pr_text-shadow.asp</a></li>
+							<li><a href="https://www.youtube.com/watch?v=PmJTLCx0GRI">https://www.youtube.com/watch?v=PmJTLCx0GRI</a></li>
+							<li><a href="http://v4-alpha.getbootstrap.com/components/forms/">http://v4-alpha.getbootstrap.com/components/forms/</a></li>
+							<li><a href="http://www.w3schools.com/bootstrap/bootstrap_ref_css_tables.asp">http://www.w3schools.com/bootstrap/bootstrap_ref_css_tables.asp</a></li>
+						</ul>
+					</p>
+
+				</div>
+
+			</div>
+
+		</body>
+
+	</html>
+
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
+<!-- The MIT License (MIT)
+
+	Copyright (c) 2016 Jordan Hendley, Ryan Welling
+
+	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
+<html lang="en"> 
+  	<head>
+	    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+	    <meta content="utf-8" http-equiv="encoding" />
+	    <title>Tetris</title>
+
+	    <!-- THIS FIRST -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	    <!-- Optional theme -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> <!-- 1 - JQUERY -->
+	    <script src="Pixi/bin/pixi.js"></script>
+	    <script src="js/tetris.js"></script>
+	    <script src="js/tetris.min.js"></script>
+	    
+	    <script type="text/javascript">
+      	$(document).ready(function(e){
+        	$("#scoreboard").load("highscore_controller.php");
+      	});
+
+      	$(document).on("click", "#startgame", function(e){
+      		$("#tetris").html("");
+        	$("#tetris").load(tetrisController());
+      	});
+	    </script>
+
+  	</head>
+	<body style="padding-top: 25px;">
+
+		<div class="container-fluid">
+	    	<div class="jumbotron" style="background-image: url('tetris.jpg') !important; background-position: center center !important">
+	  		</div>
+		</div>
+	  	<div class="container">
+	  		<div class="row">
+	  			<div class="col-sm-4">
+	  			</div>
+				<div class="col-sm-4 text-center">
+      				<h2 style="color: red; border-style: double;">TETRIS in Pixi.js</h2>
+    			</div><!--col-sm-12-->
+    			<div class="col-sm-4">
+	  			</div>
+    		</div><!--row-->
+	  		<div class="row">
+	  			<div class="col-sm-4">
+		  			<p>Welcome to our Tetris game</p>
+		  			<p>Click the button to start a new game</p>
+		  			<ul>
+		  				<li>Up / Space rotates the piece</li>
+		  				<li>left / right move left right</li>
+		  				<li>down moves the piece down faster</li>
+		  			</ul>
+		  			<p>If you beat the high score you can enter your name in our database!</p>
+		  			<p>Copyright (c) 2016 Jordan Hendley, Ryan Welling</p>
+	  			</div>
+		  		<div class="col-sm-4 text-center">
+		  			<button class="btn btn-primary" type="button" id="startgame">Start New Game</button>
+					<div id="tetris" style="padding-top: 10px;">
+					</div>
+				</div> <!--col-sm-8-->
+				
+				<div class = "col-sm-4 text-center">
+					<div id="scoreboard">
+					</div>
+				</div> <!--col-sm-4-->
+			</div> <!--row-->
+		</div> <!--container-->
+
+	</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
+
+    <html lang="en"> 
+        <head>
+          <title>README - V7</title> 
+      
+          <!-- Meta Information about Page -->
+          <meta charset="utf-8" />
+          <meta name="AUTHOR"      content="Ryan Welling"/>
+          <meta name="keywords"    content="University of Utah, Spring 2016"/>
+          <meta name="description" content="READMEV7"/>
+      
+          </head>
+
+        <body>       
+
+			<div id = header>
+				
+				<div style="margin-top: 50px; margin-left: 50px;">
+					<h1>CS4540 - Web Software Architecture</h1>
+					<h2>Ryan Welling - README - V7</h2>
+					<p style="color: red; margin-bottom: 50px;">University of Utah</p>
+				
+					<a href="../../../../index.html" title="Projects Main Page">Home</a><br>
+					<a href="https://github.com/uofu-cs4540/133136" title="Repo">Github Repo for Class</a><br>
+					<a href="https://github.com/HeroOfCanton" title="Repo">Personal Github Repo</a><br>
+
+					<p style="margin-top: 10px; width: 800px;">The School of Computing tracks Graduate student progress each semester to make sure the students are making satisfactory progress toward their degree.</p>
+
+		          <p style="margin-top: 10px; width: 800px;">First, I went through and sanitized all of my database calls that either update or insert information into them. You can see that in the Model/Student/save_progess_model.php, among others. I sanitized a few calls from the database, but not many, as I have regex's on the front to prevent bogus information, and all of my inserts and updates are sanitized. </p>
+
+		          <p style="margin-top: 10px; width: 800px;">Every user password, for now, is password. Student logins include: bross, mreynold, acarver ~ Faculty logins include: rwelling, lluthor ~ DGS login: tzahn</p>
+
+		          <p style="margin-top: 10px; width: 800px;">There is a known issue with new user creation. Somehow, in the effort to sanitize inputs, new user's passwords are being hashed wrong. I can't figure it out, but that's not part of the assignment this week, so I didn't fix it. It was working in V5.</p>
+
+		          <p style="margin-top: 10px; width: 800px;">Regarding AJAX and charts, I feel like I've done good work. The Student list, which dynamically fills out a table with each student's information, and the charts, of which there are 3, and which are replaced via AJAX as well. The information is called from my database, it's not statically generated.</p>
+
+					<p style="margin-top: 10px; width: 800px;">Testing strategy was simple: Use OSX, Window 7, Windows 10, and Ubuntu Linux, along with their native browsers and extra browsers, like Chrome, and Firefox, to make sure the page renders correclty.  Only Support for IE11 and up, as Microsoft has terminated support for IE9 and 10.</p>
+
+					<p style="margin-top: 20px; width: 800px;">The following pages were referenced in the design process: 
+						<ul>
+							<li><a href="http://www.highcharts.com/demo">http://www.highcharts.com/demo</a></li>
+							<li><a href="http://stackoverflow.com/questions/10926965/extracting-data-from-json-object-in-jquery-or-js">http://stackoverflow.com/questions/10926965/extracting-data-from-json-object-in-jquery-or-js</a></li>
+							<li><a href="http://stackoverflow.com/questions/6646001/ajax-json-in-to-highcharts-pie-chart">http://stackoverflow.com/questions/6646001/ajax-json-in-to-highcharts-pie-chart</a></li>
+							<li><a href="http://php.net/manual/en/function.json-decode.php">http://php.net/manual/en/function.json-decode.php</a></li>
+						</ul>
+					</p>
+
+				</div>
+
+			</div>
+
+		</body>
+
+	</html>
+
+

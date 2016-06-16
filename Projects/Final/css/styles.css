@@ -1,0 +1,16 @@
+canvas {
+    width: 800px;
+    margin: auto;
+    transform: translateY(-60px);
+    border: 2px solid red;
+    border-style: double;
+}
+
+body {
+    background-image: url("../assets/space.png");
+}
+
+.jumbotron {
+    background-color: #020202 !important;
+    margin-top: -50px;
+}

@@ -1,0 +1,105 @@
+/* style the outer div to give it width */
+.menu 
+{
+	margin: auto;
+	padding:10px 0px 5px 0px;
+	position:relative; /*Make the container moveable*/
+	width:450px;     /*Main bar total width*/
+	font-size:0.95em;
+	padding-bottom: 50px; /*Padding between the bottom of your mainbar and the rest of your page */
+}
+
+/* remove all the bullets, borders and padding from the default list styling */
+.menu ul 
+{
+	padding:0;
+	margin:0;
+	list-style-type:none;
+}
+
+.menu ul ul 
+{
+	width:150px; /* Cell size. Divide the main width (750px) by the number of cells you need */
+}
+
+/* float the list to make it horizontal and a relative positon so that you can control the dropdown menu positon */
+
+.menu li 
+{
+	float: left;
+	width: 150px; /* Cell size. Divide the main width (750px) by the number of cells you need */
+	position:relative;
+}
+
+/* style the links for the top level */
+.menu a, .menu a:visited 
+{
+	display:block;
+	font-size:12px;
+	text-decoration:none; 
+	color:#fff; 
+	width:140px; /* Defines the main box dimensions. */
+	height:30px; /*How tall your cells are*/
+	border:1px solid #fff; 
+	border-width: 1px 1px 0px 0px; 
+	background:#758279; 
+	padding-left:5px; 
+	line-height:29px; 
+}
+
+/* style the second level background */
+.menu ul ul a.drop, .menu ul ul a.drop:visited 
+{
+	background:#949e7c;
+}
+/* style the second level hover */
+.menu ul ul a.drop:hover
+{
+	background:#c9ba65;
+}
+
+.menu ul ul :hover > a.drop 
+{
+	background:#c9ba65;
+}
+
+/* hide the sub levels and give them a positon absolute so that they take up no room */
+.menu ul ul 
+{
+	visibility:hidden;
+	position:absolute;
+	height:0;
+	top:31px;
+	left:0; 
+	width:125px;  /* Size of the daughter cells */
+}
+
+/* style the second level links */
+.menu ul ul a, .menu ul ul a:visited 
+{
+	background:#d4d8bd; 
+	color:#000; 
+	height:auto; 
+	line-height:1em; 
+	padding:5px 10px; 
+	width:129px
+}
+
+/* style the top level hover */
+.menu a:hover, .menu ul ul a:hover
+{
+	color:#fff; 
+	background:#949e7c;
+}
+
+.menu :hover > a, .menu ul ul :hover > a 
+{
+	color:#fff;
+	background:#949e7c;
+}
+
+/* make the second level visible when hover on first level list OR link */
+.menu ul :hover ul
+{
+	visibility:visible; 
+}
